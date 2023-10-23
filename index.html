@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Wilfried Cools">
-<meta name="dcterms.date" content="2023-10-11">
-<meta name="description" content="intro">
+<meta name="author" content="Wilfried Cools &amp; Lara Stas">
+<meta name="dcterms.date" content="2023-10-22">
+<meta name="description" content="a few basic building blocks">
 
-<title>Advanced R: tidyverse - overview</title>
+<title>the r-square - r-square intro</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Advanced R: tidyverse</span>
+    <span class="navbar-title">the r-square</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -119,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Tidyverse</span></a>
+ <span class="menu-text">Intro</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./manipulation.html" rel="" target="">
@@ -185,12 +185,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">overview</h1>
+<h1 class="title">r-square intro</h1>
 </div>
 
 <div>
   <div class="description">
-    intro
+    a few basic building blocks
   </div>
 </div>
 
@@ -200,14 +200,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Wilfried Cools </p>
+             <p>Wilfried Cools &amp; Lara Stas </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 11, 2023</p>
+      <p class="date">October 22, 2023</p>
     </div>
   </div>
   
@@ -216,8 +216,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 <div>
   <div class="abstract">
-    <div class="abstract-title">In focus</div>
-    About R and tidyverse.
+    <div class="abstract-title">SQUARE consultants</div>
+    square.research.vub.be
   </div>
 </div>
 
@@ -225,9 +225,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <!--
 knitr::purl('index.qmd')
+Compiled Oct 22, 2023
 -->
-<p>Compiled Oct 11, 2023</p>
-<!-- -->
+<p>Compiled on R 4.3.1</p>
 <div class="callout callout-style-default callout-important callout-titled" title="What-Why-Who">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -238,16 +238,19 @@ What-Why-Who
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Current draft aims to introduce researchers to the <code>tidyverse</code> ecosystem in R.</p>
-<p>Our target audience is primarily the research community at VUB / UZ Brussel, those who have some basic experience in R and want to know more.</p>
-<p>We invite you to help improve this document by sending us feedback: wilfried.cools@vub.be</p>
+<p>This site aims to introduce researchers to the <code>tidyverse</code> ecosystem in R.</p>
+<p>Our target audience is primarily the research community of the VUB / UZ Brussel, particularly those who have some basic experience in R and want to know more.</p>
+<p>We invite you to help improve this document by sending us feedback: square@vub.be</p>
 </div>
 </div>
 <!-- INTRO -->
 <section id="advanced-r-course-tidyverse" class="level2">
 <h2 class="anchored" data-anchor-id="advanced-r-course-tidyverse">Advanced R course: tidyverse</h2>
 <ul>
-<li>advanced: you need a bit of experience to understand this course</li>
+<li>advanced: you need a bit of experience to understand this course
+<ul>
+<li>an r primer is given as context and can give you a quick update</li>
+</ul></li>
 <li>not advanced: it is still about simple stuff
 <ul>
 <li>data manipulation</li>
@@ -257,7 +260,7 @@ What-Why-Who
 <ul>
 <li>manipulation and visualization linked to modeling</li>
 <li>bridges the gap between raw data and modeling</li>
-<li>a large part of most analyses</li>
+<li>important part of most analyses</li>
 </ul></li>
 <li>our focus: tidyverse
 <ul>
@@ -292,27 +295,15 @@ the tidyverse contract creates consistency
 <li>intuitive defaults</li>
 <li>constancy of data type by default
 <ul>
-<li>eg., function on dataframe results in dataframe by default</li>
+<li>e.g., function on a data frame results in data frame by default</li>
 </ul></li>
 </ul></li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.2     ✔ readr     2.1.4
-✔ forcats   1.0.0     ✔ stringr   1.5.0
-✔ ggplot2   3.4.2     ✔ tibble    3.2.1
-✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
 </div>
 <ul>
-<li>tidyverse = first successful attempt to get R use more consistent
+<li>tidyverse = first successful attempt to get more consistency in R
 <ul>
 <li>earlier attempts failed</li>
 <li>tidyverse well thought through</li>
@@ -332,12 +323,12 @@ the tidyverse contract creates consistency
 <li>…</li>
 </ul></li>
 </ul>
-<p>Find convenient cheat sheets at https://rstudio.com/resources/cheatsheets/.</p>
+<p>Find convenient cheat sheets <em><a href="https://rstudio.com/resources/cheatsheets">here</a> or directly in RStudio (Help → Cheat Sheets)</em>.</p>
 </section>
 <section id="tidy-data-input" class="level2">
 <h2 class="anchored" data-anchor-id="tidy-data-input">tidy data (input)</h2>
 <ul>
-<li>Hadley Wickham’s ggplot (now works at Rstudio)
+<li>Hadley Wickham’s ggplot (now works at RStudio)
 <ul>
 <li>visualize data in agreement with grammar of graphics
 <ul>
@@ -390,16 +381,16 @@ Getting started with `tidyverse`.
 -->
 <p>Install (at least once) and load (once per R session) the <code>tidyverse</code> package.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'tidyverse'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'tidyverse'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The individual packages that are loaded are listed, as are their conflicts.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Conflicts arise loaded packages use the same function names. Resolve such conflicts for example by referencing the package with <code>::</code>, eg., <code>stat::filter( )</code>.</p>
+<p>Conflicts arise when loaded packages use the same function names. Resolve such conflicts for example by referencing the package with <code>::</code>, e.g., <code>stat::filter( )</code>.</p>
 <p>Conflicts can be checked for tidyverse.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tidyverse_conflicts</span>( )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tidyverse_conflicts</span>( )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
@@ -410,7 +401,7 @@ Getting started with `tidyverse`.
 <p>The <code>tidyverse</code> ecosystem includes<br>
 broom, conflicted, cli, dbplyr, dplyr, dtplyr, forcats, ggplot2, googledrive, googlesheets4, haven, hms, httr, jsonlite, lubridate, magrittr, modelr, pillar, purrr, ragg, readr, readxl, reprex, rlang, rstudioapi, rvest, stringr, tibble, tidyr, xml2, tidyverse.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tidyverse_packages</span>( )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tidyverse_packages</span>( )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Most of these packages should be loaded explicitly (not included in <code>library(tidyverse)</code>).</p>
 </section>
@@ -424,7 +415,7 @@ Setting the stage for data manipulation with `tidyverse`.
 -->
 <p>Data: the <code>tibble</code> is the tidyverse data type, defined in the <code>tibble</code> package.</p>
 <ul>
-<li>R data type for analysis is a <code>dataframe</code>, a list of equally sized vectors
+<li>R data type for analysis is a <code>data frame</code>, a list of equally sized vectors
 <ul>
 <li>numeric vector (either double, integer, or complex)</li>
 <li>factor (ordered, not ordered)</li>
@@ -451,16 +442,16 @@ Setting the stage for data manipulation with `tidyverse`.
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mytibble <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">colA =</span> <span class="fu">c</span>(<span class="st">"a"</span>,<span class="st">"b"</span>,<span class="st">"c"</span>),</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">colB =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>(mytibble <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>colA, <span class="sc">~</span>colB,</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"a"</span>,   <span class="dv">1</span>,</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"b"</span>,   <span class="dv">2</span>,</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"c"</span>,   <span class="dv">3</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>mytibble <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">colA =</span> <span class="fu">c</span>(<span class="st">"a"</span>,<span class="st">"b"</span>,<span class="st">"c"</span>),</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">colB =</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>(mytibble <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>colA, <span class="sc">~</span>colB,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"a"</span>,   <span class="dv">1</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"b"</span>,   <span class="dv">2</span>,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"c"</span>,   <span class="dv">3</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   colA   colB
@@ -469,7 +460,7 @@ Setting the stage for data manipulation with `tidyverse`.
 2 b         2
 3 c         3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mytibble)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mytibble)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "tbl_df"     "tbl"        "data.frame"</code></pre>
 </div>
@@ -478,19 +469,19 @@ Setting the stage for data manipulation with `tidyverse`.
 <li>compare with dataframe:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>mydf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">colA=</span><span class="fu">c</span>(<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>),<span class="at">colB=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mydf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>mydf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">colA=</span><span class="fu">c</span>(<span class="st">'a'</span>,<span class="st">'b'</span>,<span class="st">'c'</span>),<span class="at">colB=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mydf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "data.frame"</code></pre>
 </div>
 </div>
-<p>Process: the <code>magrittr</code> package offer pipes <code>%&gt;%</code></p>
+<p>Process: the <code>magrittr</code> package offers pipes <code>%&gt;%</code></p>
 <ul>
-<li>R processes data with functions, eg., <code>mean(mytibble$colB)</code>
+<li>R processes data with functions, e.g., <code>mean(mytibble$colB)</code>
 <ul>
 <li>reads inside-out, standard in base R and optional in tidyverse</li>
 </ul></li>
-<li>R data can be processed using pipes too, eg., <code>mytibble %&gt;% summarize(mean(colB))</code>
+<li>R data can be processed using pipes too, e.g., <code>mytibble %&gt;% summarize(mean(colB))</code>
 <ul>
 <li>reads left to right, standard in tidyverse (output turns into input)</li>
 <li>especially of interest with multiple steps, serves readability</li>
@@ -498,14 +489,20 @@ Setting the stage for data manipulation with `tidyverse`.
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>x1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>); x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">sum</span>((x1<span class="sc">-</span>x2)<span class="sc">^</span><span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.459238</code></pre>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x1 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>); x2 <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Manually calculating the root sum of squares in base R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">sum</span>((x1<span class="sc">-</span>x2)<span class="sc">^</span><span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.922949</code></pre>
+</div>
+</div>
+<p>And in tidyverse.</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>(x1<span class="sc">-</span>x2)<span class="sc">^</span><span class="dv">2</span> <span class="sc">%&gt;%</span> <span class="fu">sum</span>( ) <span class="sc">%&gt;%</span> <span class="fu">sqrt</span>( )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.459238</code></pre>
+<pre><code>[1] 2.922949</code></pre>
 </div>
 </div>
 </section>
@@ -514,11 +511,11 @@ Setting the stage for data manipulation with `tidyverse`.
 <p>Create factors</p>
 <ul>
 <li>for data.frame <code>mtcars</code></li>
-<li>change the elements (mutate)</li>
-<li>for all variables (across)</li>
+<li>change the elements (<code>mutate</code>)</li>
+<li>for all variables (<code>across</code>)</li>
 <li>where variable <code>.</code> &lt; 4 distinct values</li>
 <li>to factor</li>
-<li>and show the structure (glimpse)</li>
+<li>and show the structure (<code>glimpse</code>)</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
